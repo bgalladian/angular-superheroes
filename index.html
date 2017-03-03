@@ -12,6 +12,16 @@
   <input type="text" placeholder="Search for Heroes" ng-model= "superPhone">
   <h2>Heroes</h2>
   <br>
+  <div class = "new-hero-form">
+      <h2>Add a new hero to SuperPhone!</h2>
+      <br>
+      Name: <input type="text" ng-model="vm.newName">
+      Number: <input type="text" ng-model="vm.newNumber">
+      Company: <input type="text" ng-model="vm.newCompany">
+      Picture:<input type="text" ng-model="vm.newImage">
+      <button ng-click="vm.addSuperPhone()"> Submit </button>
+    </div>
+
   <div ng-repeat = "superPhone in vm.superPhones | filter:superPhone"
        ng-class="{'dc': superPhone.company === 'DC', 'marvel': superPhone.company === 'Marvel', 'image': superPhone.company === 'Image', 'amalglam': superPhone.company === 'Amalglam'}" >
 
@@ -20,5 +30,7 @@
     <p>Company: {{superPhone.company}}</p>
     <button ng-click="viewImage = !viewImage"> What I look like?</button> <p ng-show="viewImage"><img src="{{superPhone.image}}"></p>
   </div>
+
+
 </body>
 </html>

@@ -44,5 +44,9 @@ angular
   .controller("superPhonesCtrl", [superPhoneController])
 
   function superPhoneController(){
-    this.superPhones = superPhoneData
+    this.superPhones = superPhoneData;
+    this.addSuperPhone = function(){
+    let superPhone = {name: this.newName, number: this.newNumber, company: this.newCompany, image: this.newImage}
+    this.superPhones.push(superPhone)
   }
+}
