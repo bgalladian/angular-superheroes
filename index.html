@@ -11,14 +11,14 @@
 <body ng-controller = 'superPhonesCtrl as vm'>
   <input type="text" placeholder="Search for Heroes" ng-model= "superPhone">
   <h2>Heroes</h2>
+  <br>
   <div ng-repeat = "superPhone in vm.superPhones | filter:superPhone"
        ng-class="{'dc': superPhone.company === 'DC', 'marvel': superPhone.company === 'Marvel', 'image': superPhone.company === 'Image', 'amalglam': superPhone.company === 'Amalglam'}" >
 
     <p>{{$index + 1}}. {{superPhone.name}}</p>
     <p>Number: {{superPhone.number}}
     <p>Company: {{superPhone.company}}</p>
-    <p><img src="{{superPhone.image}}"></p>
-    
+    <button ng-click="viewImage = !viewImage"> What I look like?</button> <p ng-show="viewImage"><img src="{{superPhone.image}}"></p>
   </div>
 </body>
 </html>

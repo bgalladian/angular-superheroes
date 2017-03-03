@@ -13,16 +13,21 @@ body {
 
 .marvel {
   background-color: red;
+  width: 400px
 }
 
 .dc {
   background-color: blue;
+  width: 400px
+
 }
 
 .image {
   background-color: orange;
+  width: 400px
 }
 
 .amalglam {
-  background-color: dodgerblue;
+  background-color: hotpink;
+  width: 400px
 }
