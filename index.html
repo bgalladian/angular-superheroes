@@ -9,9 +9,10 @@
   <script src="app.js"></script>
 </head>
 <body ng-controller = 'superPhonesCtrl as vm'>
+  Search: <input type="text" ng-model= "superPhone">
   <h2>Heroes</h2>
-  <div class = "heroes"
-  <div ng-repeat = "superPhone in vm.superPhones">
+  <div class = "heroes">
+  <div ng-repeat = "superPhone in vm.superPhones | filter:superPhone">
     <p>{{$index + 1}}. {{superPhone.name}}<br>Number: {{superPhone.number}}<br>Company: {{superPhone.company}}<br><img src="{{superPhone.photo_url}}"></p>
   </div>
   </div>
