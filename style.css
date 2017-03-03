@@ -1,37 +1,64 @@
-h2 {
-  color: black;
+body{
+  background-image: url("https://newevolutiondesigns.com/images/freebies/city-wallpaper-46.jpg");
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
-body {
-  color: white;
+h2, h3{
+  text-align: center;
 }
 
  img {
-    height: 400px;
-    width: 400px;
-}
-
-.marvel {
-  background-color: red;
-  width: 400px
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    float: right;
 }
 
 .dc {
-  background-color: blue;
-  width: 400px
+  border: solid blue;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
 
+}
+
+.marvel {
+  border: solid red;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
 }
 
 .image {
-  background-color: orange;
-  width: 400px
+  border: solid orange;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+
 }
 
 .amalglam {
-  background-color: hotpink;
-  width: 400px
+  border: solid hotpink;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+
+
 }
 
 .new-hero-form {
-  color: black;
+  text-align: center;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
