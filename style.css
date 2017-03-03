@@ -1,4 +1,28 @@
-.heroes img {
+h2 {
+  color: black;
+}
+
+body {
+  color: white;
+}
+
+ img {
     height: 400px;
     width: 400px;
+}
+
+.marvel {
+  background-color: red;
+}
+
+.dc {
+  background-color: blue;
+}
+
+.image {
+  background-color: orange;
+}
+
+.amalglam {
+  background-color: dodgerblue;
 }
