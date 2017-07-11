@@ -9,26 +9,44 @@
   <script src="app.js"></script>
 </head>
 <body ng-controller = 'superPhonesCtrl as vm'>
-  <input type="text" placeholder="Search for Heroes" ng-model= "superPhone">
+
   <h2>Heroes</h2>
   <br>
   <div class = "new-hero-form">
       <h3>Add a new hero to SuperPhone!</h3>
       Name: <input type="text" ng-model="vm.newName">
       Number: <input type="text" ng-model="vm.newNumber">
-      Company: <input type="text" ng-model="vm.newCompany">
+      Company: <select type="text" ng-model="vm.newCompany">
+        <option value="DC">DC</option>
+              <option value="Marvel">Marvel</option>
+              <option value="Other">Other</option>
+            </select>
       Picture:<input type="text" ng-model="vm.newImage">
       <button ng-click="vm.addSuperPhone()"> Submit </button>
     </div>
     <br>
+      <input type="text" placeholder="Search for Heroes" ng-model= "superPhone" class="search">
 <div class = "hero-info">
   <div ng-repeat = "superPhone in vm.superPhones | filter:superPhone"
-       ng-class="{'dc': superPhone.company === 'DC', 'marvel': superPhone.company === 'Marvel', 'image': superPhone.company === 'Image', 'amalglam': superPhone.company === 'Amalglam'}" >
+       ng-class="{'dc': superPhone.company === 'DC', 'marvel': superPhone.company === 'Marvel', 'image': superPhone.company === 'Image', 'other': superPhone.company === 'Other'}" >
 
     <p>{{superPhone.name}}</p>
     <p>Phone Number: <br>{{superPhone.number}}
     <p>Company: {{superPhone.company}}</p>
     <button ng-click="viewImage = !viewImage"> Picture </button> <p ng-show="viewImage"><img src="{{superPhone.image}}"></p>
+    <button class="c-btn t-btn--style" ng-click="edit = !edit">Edit</button>
+          <div ng-show="edit" ng-submit="edit = false">
+            <form class="editForm">
+              <label>Name: </label><input type="text" ng-model="superPhone.name" placeholder="Name" ng-required>
+              <label>Phone: </label><input type="text" ng-model="superPhone.number" placeholder="xxx-xxx-xxxx" ng-required>
+              <label>Comic: </label><select name="Comic" type="text" ng-model="superPhone.company" placeholder="Comic" ng-required>
+                <option value="DC">DC</option>
+                <option value="Marvel">Marvel</option>
+                <option value="Other">Other</option>
+              </select>
+              <label>Photo: </label><input type="text" ng-model="superPhone.image" placeholder="Photo" ng-required placeholder="Photo URL">
+              <br>
+              <button type="submit">Save</button>
   </div>
 </div>
 

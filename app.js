@@ -25,13 +25,13 @@ let superPhoneData = [
 
   { name: "Spawn",
     number: "15-SPAWN",
-    company: "Image",
+    company: "Other",
     image: "http://cdn.moviestillsdb.com/sm/b80c1c3b283e733f21ac302a88265926/spawn.jpg"
   },
 
   { name: "Dark Claw",
     number: "16-DKCLW",
-    company: "Amalglam",
+    company: "Other",
     image: "http://www.writeups.org/wp-content/uploads/Dark-Claw-Amalgam-Comics-Wolverine-Batman-a.jpg"
   }
 
